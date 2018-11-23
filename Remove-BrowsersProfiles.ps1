@@ -10,7 +10,7 @@ foreach ($user in (Get-LocalUser)) {
             # Remove all Mozilla applications' configurations
             remove-item "$userprofile\AppData\Local\Mozilla" -Recurse -Force
             # Remove all temp files
-            remove-item "$userprofile\AppData\Local\Temp\*" -Recurse -Force
+            remove-item "$userprofile\AppData\Local\Temp\*.*" -Recurse -Force
         }
     }
 }
